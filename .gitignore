@@ -31,3 +31,5 @@ replay_pid*
 .env
 /src/test
 >>>>>>> Stashed changes
+
+.vscode
