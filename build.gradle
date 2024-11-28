@@ -1,0 +1,48 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'com.voice.transcription'
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Apache HTTPClient for making HTTP requests
+    implementation 'org.apache.httpcomponents.client5:httpclient5:5.2'
+
+    // Jackson for JSON processing (if needed for API responses)
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
+
+    // Whisper AI - Placeholder for a Whisper-compatible library or API client
+    // Replace this with an actual dependency if available, or use an API integration
+    // implementation 'com.example:whisper-client:1.0' // Replace with the real library
+
+    // Logging (optional, for debugging)
+    implementation 'org.slf4j:slf4j-api:2.0.9'
+    implementation 'org.slf4j:slf4j-simple:2.0.9'
+
+    implementation 'com.google.code.gson:gson:2.10.1'
+    implementation 'org.apache.poi:poi:5.2.3'
+    implementation 'org.apache.poi:poi-ooxml:5.2.3'
+
+    // JUnit for testing
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
+    testImplementation 'org.assertj:assertj-core:3.24.2'
+}
+
+// application {
+//     // Replace this with your main class
+//     mainClass = 'com.voice.transcription.Main'
+// }
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+test {
+    useJUnitPlatform()
+}
